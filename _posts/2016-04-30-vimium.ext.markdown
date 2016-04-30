@@ -1,24 +1,20 @@
 ---
 layout: default
 title:  "vimium"
-date:   2016-04-30 21:40:00
+date:   2016-04-12 17:50:00
 categories: main
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+# vimium
 
-Jekyll also offers powerful support for code snippets:
+第一篇还没想好写点什么 就从今天刚看到的这个chrome插件开始吧
+作为常年放弃鼠标党 自然希望键盘能做的事情越多越好 这个插件基本解决的chrome中的操作问题 
+即便是功能没有覆盖到的地方 配合chrome的快捷键 基本就妥妥的了
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+商店地址[vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?utm_source=chrome-ntp-icon)
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+## vimium快捷键
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+通过`shift+/`可以调起vimium的快捷键提示 如图:
+
+![key bindings](/images/vimium.png)

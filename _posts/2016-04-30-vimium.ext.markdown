@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "vimium"
-date:   2016-04-12 17:50:00
+date:   2016-04-30 21:50:00
 categories: main
 ---
 
@@ -18,3 +18,75 @@ categories: main
 通过`shift+/`可以调起vimium的快捷键提示 如图:
 
 ![key bindings](/images/vimium.png)
+
+
+下面就列几个常用的快捷键：
+
+<table>
+   <tr>
+      <td>快捷键</td>
+      <td>功能</td>
+      <td>快捷键</td>
+      <td>功能</td>
+   </tr>
+   <tr>
+      <td>j</td>
+      <td>向上轻移</td>
+      <td>J</td>
+      <td>上一标签</td>
+   </tr>
+   <tr>
+      <td>k</td>
+      <td>向下轻移</td>
+      <td>K</td>
+      <td>下一标签</td>
+   </tr>
+   <tr>
+      <td>u</td>
+      <td>向上半屏</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>d</td>
+      <td>向下半屏</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>gg</td>
+      <td>至顶部</td>
+      <td>G</td>
+      <td>至底部</td>
+   </tr>
+   <tr>
+      <td>o</td>
+      <td>呼出地址栏，当前标签打开新页面</td>
+      <td>O</td>
+      <td>呼出地址栏，新标签打开新页面</td>
+   </tr>
+   <tr>
+      <td>f</td>
+      <td>当前标签打开某一链接</td>
+      <td>F</td>
+      <td>新标签打开某一链接</td>
+   </tr>
+   <tr>
+      <td>x</td>
+      <td>关闭当前标签</td>
+      <td>X</td>
+      <td>回复刚刚关闭的标签</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td></td>
+      <td>H</td>
+      <td>历史回退</td>
+   </tr>
+   <tr>
+      <td>gi</td>
+      <td>光标定位到输入框</td>
+      <td></td>
+      <td></td>
+   </tr>
+</table>

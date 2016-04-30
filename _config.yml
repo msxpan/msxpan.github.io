@@ -2,7 +2,7 @@
 title:        EARTH STATION
 tagline:      the earth station of meteorological satellite Random
 baseurl:      ""
-paginate:     1
+paginate:     5
 
 # About/contact
 author:

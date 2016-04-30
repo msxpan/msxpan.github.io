@@ -1,13 +1,13 @@
 # Setup
-title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
+title:        EARTH STATION
+tagline:      the earth station of meteorological satellite Random
 baseurl:      ""
 paginate:     1
 
 # About/contact
 author:
-  name:       Author name
-  url:        http://yourhomepage.com 
+  name:       msx.pan
+  url:        https://github.com/msxpan 
 
 # Gems
 gems:

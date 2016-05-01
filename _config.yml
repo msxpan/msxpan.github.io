@@ -3,6 +3,7 @@ title:        EARTH STATION
 tagline:      the earth station of meteorological satellite Random
 baseurl:      ""
 paginate:     5
+timezone: Asia/Shanghai
 
 # About/contact
 author:
@@ -16,4 +17,3 @@ gems:
 #Others
 markdown: kramdown
 
-timezone: Asia/Shanghai

@@ -5,34 +5,35 @@ date:   "2016-04-30 23:20:00"
 categories: jekyll
 ---
 
-#使用github pages搭建个人Blog
+#使用Github Pages搭建个人Blog
 
-关于使用GithubPages搭建个人Blog的文章 网络上到处都是 下面仅记录下简单的流程 和搭建过程中遇到的一些坑
+关于使用Github Pages搭建个人Blog的文章网络上到处都是，下面仅记录下简单的流程和搭建过程中遇到的一些坑
 
 ## 创建项目主页
 
 这里直接使用了[GithubPages](https://pages.github.com/)向导中提供的方法 
+
 这样整个网站内容都在master分支下
-http://username.github.io/就是你的个人主页的地址了
 
-## jekyll模版的使用
+http:// username .github.io/就是你的个人主页的地址了
 
-为了方便所以先找个[jekyll模版](http://jekyllthemes.org/)
+## jekyll模板的使用
 
+随后我们需要创建用于jekyll的网站结构，关于jekyll的更多内容可以参见[这里](http://jekyll.bootcss.com/)
 
-这里我使用的是这个[Cayman Theme](https://github.com/pietromenna/jekyll-cayman-theme)
+为了方便所以就先找个[jekyll模版](http://jekyllthemes.org/)用下先
 
-结构简单 以后再基于这个搞自己的模版
+这里我使用的是这个[Cayman Theme](https://github.com/pietromenna/jekyll-cayman-theme),结构样式都比较简单，方便之后基于这个搞自己的模版
 
-下载放到git目录下即可
+下载模版放到git目录下即可
 
 ## 本地环境搭建
 
 ### Ruby环境搭建
 
-jekyll基于Ruby开发 本地需要一个Ruby环境来提供本地测试
+jekyll基于Ruby开发，所以需要一个Ruby环境来提供本地测试
 
-os x已自带Ruby环境(新版Ruby自带gem)
+Mac OS 已自带Ruby环境(新版Ruby自带gem)
 
 所以Ruby和gem安装这步就省了
 
@@ -40,33 +41,59 @@ windows下安装可以参见[这里](http://www.ruby-lang.org/)
 
 ### 安装Bundle
 
-由于国内网络的问题 gem基本上是挂掉的
+由于国内网络的问题gem基本上是挂掉的
 
-所以使用gem前 还是替换淘宝镜像先
+所以使用gem前还是替换淘宝镜像先
 
-`gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/`
+{% highlight Bash %}
+gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
+{% endhighlight %}
 
 然后执行下面的命令(需要管理员权限):
 
-`gem install bundle`
+{% highlight Bash %}
+gem install bundle
+{% endhighlight %}
 
 ### 页面初始化
 
-bundle使用前需要创建Gemfile文件来定义 gem源和插件依赖
+bundle使用前需要创建Gemfile文件来定义gem源和插件依赖
 
-模板中通常都会有这个文件 所以使用模板的话 这步通常可以省略
+模板中通常都会有这个文件，所以使用模板的话，这步通常可以省略
 
-不过要确认下模板中的Gemfile的source是否是淘宝镜像 不是需要替换成 https://ruby.taobao.org/
+不过要确认下模板中的Gemfile的source是否是淘宝镜像，不是需要替换成 https://ruby.taobao.org/
+
+这里是我的Gemfile文件的内容，
+
+
+{% highlight JavaScript %}
+source 'https://ruby.taobao.org/'
+gem 'jekyll'
+gem 'jekyll-paginate'
+gem 'kramdown'
+gem 'pygments.rb'
+{% endhighlight %}
+
+
+模版Cayman Theme中使用的markdown解释器是redcarpet，
+
+貌似自5月1日以后，github就不再支持这个解释器了，所以这里替换了github默认的解释器kramdown
 
 然后执行
 
-`bundle install`
+{% highlight Bash %}
+bundle install
+{% endhighlight %}
+
+来安装相应的依赖 (jekyll也一并安装了)
 
 ### 本地测试
 
-启动本地服务
+编译并启动本地服务
 
-`bundle exec jekyll serve`
+{% highlight Bash %}
+bundle exec jekyll serve
+{% endhighlight %}
 
 默认预览地址 http://127.0.0.1:4000/
 

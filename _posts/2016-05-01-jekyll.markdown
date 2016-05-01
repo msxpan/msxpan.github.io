@@ -2,7 +2,7 @@
 layout: default
 title:  "vimium"
 date:   2016-04-30 21:50:00
-categories: chrome
+categories: jekyll
 ---
 
 #使用github pages搭建个人Blog

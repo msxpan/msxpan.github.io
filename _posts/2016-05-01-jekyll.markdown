@@ -1,0 +1,77 @@
+---
+layout: default
+title:  "使用GithubPages搭建个人Blog"
+date:   "2016-05-01 10:20:00"
+categories: jekyll
+---
+
+#使用github pages搭建个人Blog
+
+关于使用GithubPages搭建个人Blog的文章 网络上到处都是 下面仅记录下简单的流程 和搭建过程中遇到的一些坑
+
+## 创建项目主页
+
+这里直接使用了[GithubPages](https://pages.github.com/)向导中提供的方法 
+这样整个网站内容都在master分支下
+http://username.github.io/就是你的个人主页的地址了
+
+## jekyll模版的使用
+
+为了方便所以先找个[jekyll模版](http://jekyllthemes.org/)
+
+
+这里我使用的是这个[Cayman Theme](https://github.com/pietromenna/jekyll-cayman-theme)
+
+结构简单 以后再基于这个搞自己的模版
+
+下载放到git目录下即可
+
+## 本地环境搭建
+
+### Ruby环境搭建
+
+jekyll基于Ruby开发 本地需要一个Ruby环境来提供本地测试
+
+os x已自带Ruby环境(新版Ruby自带gem)
+
+所以Ruby和gem安装这步就省了
+
+windows下安装可以参见[这里](http://www.ruby-lang.org/)
+
+### 安装Bundle
+
+由于国内网络的问题 gem基本上是挂掉的
+
+所以使用gem前 还是替换淘宝镜像先
+
+`gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/`
+
+然后执行下面的命令(需要管理员权限):
+
+`gem install bundle`
+
+### 页面初始化
+
+bundle使用前需要创建Gemfile文件来定义 gem源和插件依赖
+
+模板中通常都会有这个文件 所以使用模板的话 这步通常可以省略
+
+不过要确认下模板中的Gemfile的source是否是淘宝镜像 不是需要替换成 https://ruby.taobao.org/
+
+然后执行
+
+`bundle install`
+
+### 本地测试
+
+启动本地服务
+
+`bundle exec jekyll serve`
+
+默认预览地址 http://127.0.0.1:4000/
+
+## 发布
+
+本地测试通过后 提交分支即可
+
+

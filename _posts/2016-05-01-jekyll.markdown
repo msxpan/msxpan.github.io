@@ -1,8 +1,8 @@
 ---
 layout: default
-title:  "使用GithubPages搭建个人Blog"
-date:   2016-05-01 10:20:00
-categories: jekyll
+title:  "vimium"
+date:   2016-04-30 21:50:00
+categories: chrome
 ---
 
 #使用github pages搭建个人Blog

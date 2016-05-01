@@ -5,7 +5,7 @@ date:   "2016-04-30 23:20:00"
 categories: jekyll
 ---
 
-#使用Github Pages搭建个人Blog
+# 使用Github Pages搭建个人Blog
 
 关于使用Github Pages搭建个人Blog的文章网络上到处都是，下面仅记录下简单的流程和搭建过程中遇到的一些坑
 

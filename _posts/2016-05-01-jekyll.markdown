@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "使用GithubPages搭建个人Blog"
-date:   "2016-04-30 23:20:00"
+date:   "2016-05-01 23:20:00"
 categories: jekyll
 ---
 

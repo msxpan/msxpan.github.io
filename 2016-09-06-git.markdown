@@ -1,9 +1,12 @@
 ---
 layout: default
 title:  "git常用命令以及mergetool的配置"
-date:   "2016-09-06 21:30:00"
+date:   "2016-09-06 22:30:00"
 categories: jekyll
 ---
+# git的常用命令可以参见下面这张图
+
+![git terminal](/images/git.jpg)
 
 # git下的mergetool配置
 
@@ -18,6 +21,8 @@ git mergetool --tool-help
 ```
 
 通过上面的命令可以查看当前系统可以使用的和支持的git diff/git merge插件，运行结果如图，git提供了对多种比较工具的支持
+
+![git terminal](/images/gitmergetool.jpg)
 
 其中bc3即对应Beyond Compare版本3、4
 
@@ -57,7 +62,11 @@ mergetool
 提交commit后执行git merge如无冲突即自动合并，如果合并两个分支产生冲突无法自动完成merge时（如图）即可使用  git mergetool  （前面设置了bc为默认mergetool）调起Beyond Compare
 （如需运行其它比较工具 执行 git mergetool --tool=工具名  即可 例如 git mergetool --tool=opendiff  ） 
 
+![git terminal](/images/gitmerge.jpg)
+
 有多个文件的话会依次打开，随后使用Beyond Compare进行文件的merge保存即可（如图）
+
+![git terminal](/images/gitbc.jpg)
 
 其中当前所在分支会作为local（左侧），merge的分支会作为remote（右侧）
 

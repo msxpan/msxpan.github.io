@@ -89,5 +89,3 @@ jsx检查依赖[JSXHint](https://github.com/STRML/JSXHint/)
 
 Material主题
 
-![Material](https://camo.githubusercontent.com/972bd5d93779fdaf95e02cf0326b429be93adcba/687474703a2f2f692e696d6775722e636f6d2f395079784a4d4e2e676966)
-

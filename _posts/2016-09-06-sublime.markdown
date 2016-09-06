@@ -11,59 +11,83 @@ categories: jekyll
 
 # 插件列表
 [AutoFileName](https://github.com/BoundInCode/AutoFileName)
+
 自动完成文件名输入、以及目录下文件提示
 
 [Better Coffeescript](https://github.com/aponxi/sublime-better-coffeescript/)
+
 coffeescript的语法高亮、检查、编译、执行
 
 [CTags]()
+
 函数定位和跳转
 
 [DocBlockr](https://github.com/spadgos/sublime-jsdocs/)
+
 生成注释
 
 [Emmet](http://docs.emmet.io/)
+
 代码生成
 
-[JsFormat](https://pages.github.com/)
+[JsFormat]()
+
+js格式化
 
 [LESS](https://github.com/danro/LESS-sublime/)
+
 less语法高亮
 
 [Markdown Preview](https://github.com/revolunet/sublimetext-markdown-preview)
+
 md的预览、编译
 
 [Package Control](https://pages.github.com/)
+
 插件管理
 
 [Side Bar]()
+
 侧边栏增强
 
 [Side Bar Folders]()
+
 文件夹管理
 
 [Autoprefixer](https://github.com/sindresorhus/sublime-autoprefixer)
+
 css私有前缀补全
 
 [Babel]()
+
 ES6、ReactJs, jsx高亮
 
 [CSScomb]()
+
 css格式化
 
 [HTML/CSS/JS Prettify]()
+
 html/css/js格式化 不过css和js的格式化不如JsFormat和CSScomb 所以只用来格式化html。。。
 
 [PlainTasks](https://github.com/aziz/PlainTasks)
+
 todo list
 
 [Diagram]()
+
 画图脚本 时序图、流程图、用例图等
 
 [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
-代码检查 依赖node.ks
+
+代码检查 依赖node.js
 js检查依赖[jshint](http://jshint.com/install/)
-csslint检查依赖[csslint]()
+csslint检查依赖[csslint](https://github.com/CSSLint/csslint/wiki)
+jsx检查依赖[JSXHint](https://github.com/STRML/JSXHint/)
 
 [Material Theme](https://github.com/equinusocio/material-theme)
+
 Material主题
+
+![Material](https://camo.githubusercontent.com/972bd5d93779fdaf95e02cf0326b429be93adcba/687474703a2f2f692e696d6775722e636f6d2f395079784a4d4e2e676966)
+

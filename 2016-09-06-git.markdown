@@ -1,0 +1,81 @@
+---
+layout: default
+title:  "git常用命令以及mergetool的配置"
+date:   "2016-09-06 21:30:00"
+categories: jekyll
+---
+
+# git下的mergetool配置
+
+在使用git merge命令合并分支遇到冲突的时候，虽然可以通过git diff来查看冲突的具体信息，并查找冲突依次解决，但是当冲突较多的时候寻找每个文件的冲突标记去解决可能会比较麻烦，git command提供了difftool和mergetool命令来支持通过其他软件输出diff的分析结果以及进行文件的merge,下面仅以大家常用的比较工具Beyond Compare为例，简述difftool和mergetool的配置
+
+
+## 1.查看当前系统支持的git diff/git merge插件
+
+```
+git difftool --tool-help 
+git mergetool --tool-help 
+```
+
+通过上面的命令可以查看当前系统可以使用的和支持的git diff/git merge插件，运行结果如图，git提供了对多种比较工具的支持
+
+其中bc3即对应Beyond Compare版本3、4
+
+## 2.difftool/mergetool配置
+
+### 依赖
+
+需要安装bc的命令行工具（在bc菜单中运行Install Command Line Tools即可）
+
+### 配置
+
+mac terminal
+
+```
+difftool
+ git config --global diff.tool bc3 
+
+mergetool
+ git config --global merge.tool bc3   将bc设置为默认mergetool
+ git config --global mergetool.bc3 trustExitCode true   设置退出bc时完成merge
+```
+
+windows cmd/git bash
+
+```
+difftool
+ git config --global diff.tool bc3 
+ git config --global difftool.bc3.path "bcomp.exe的路径" 
+
+mergetool
+ git config --global merge.tool bc3 
+ git config --global mergetool.bc3.path "bcomp.exe的路径"  
+```
+
+### 3.使用
+
+提交commit后执行git merge如无冲突即自动合并，如果合并两个分支产生冲突无法自动完成merge时（如图）即可使用  git mergetool  （前面设置了bc为默认mergetool）调起Beyond Compare
+（如需运行其它比较工具 执行 git mergetool --tool=工具名  即可 例如 git mergetool --tool=opendiff  ） 
+
+有多个文件的话会依次打开，随后使用Beyond Compare进行文件的merge保存即可（如图）
+
+其中当前所在分支会作为local（左侧），merge的分支会作为remote（右侧）
+
+difftool的使用与mergetool类似 在commit之后 运行git difftool或者git difftool+文件名 既可调起beyond compare来查看diff的分析结果
+
+### 补充：
+windows如果出现虽然安装了bc 但是作为mergetool不可用的情况 可以通过修改gitconfig 追加difftool和mergetool的配置
+
+内容如下，mergetool的名字可以自定，路径修改为本地bcomp.exe的路径即可
+
+```
+[diff]
+tool = bc4
+[difftool "bc4"]
+cmd = \"c:/program files (x86)/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+[merge]
+tool = bc4
+[mergetool "bc4"]
+cmd = \"c:/program files (x86)/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+trustExitCode = true
+```

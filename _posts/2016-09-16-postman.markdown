@@ -1,0 +1,104 @@
+---
+layout: default
+title:  "postman使用教程"
+date:   "2016-09-16 21:30:00"
+categories: jekyll
+---
+postman堪称开发过程中测试服务的利器，用于模拟网络请求并且对请求有着很好的管理方式，下面文章中图片大多来自postman的[官方文档](https://www.getpostman.com/docs/)，这里只简略的介绍开发的各个流程中postman的使用，更多详细的操作以及api说明也还请移步官网
+
+# 开发过程中的请求模拟
+
+## 依赖
+
+[postman](https://www.getpostman.com/apps)提供了chrome app/mac app/windows app三个版本
+
+[interceptor](https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo/)
+一个chrome插件，用来同步浏览器中的cookies并可以将浏览器中发生的请求记录在postman的历史中
+
+## 模拟请求
+
+postman的基本使用非常简单易懂
+
+通过右侧的编辑区来选择请求类型和设置传入参数，点击send即可发送请求，在下面就可以看到返回的结果了
+
+![request](/images/postman/3.png)
+
+头信息的设置以及通过body中参数的设置就在url的下面
+
+![request](/images/postman/4.png)
+
+类型的选择中也可以选择文件类型来模拟上传文件
+
+![request](/images/postman/10.png)
+
+在有一些后台需要检验cookies的服务，可能需要使postman可以同步到浏览器的cookies，这就需要使用interceptor，并在postman中打开interceptor的开关
+
+![request](/images/postman/interceptor_cookies_1.png)
+
+这样就可以同步浏览器的cookies或者直接在header中设置cookies了
+
+![request](/images/postman/1.png)
+
+另外点击send下方的generate code还可以帮你生成此次请求的代码，支持js\java\python等等多种语言
+
+![request](/images/postman/2.png)
+
+## 请求的管理
+
+postman提供了便捷易用的收藏夹功能，除了用于请求的分类管理之外，还可以通过收藏夹来进行分享、文档生成和批量测试请求等功能，后面的文章中会陆续将到这些功能
+
+在左侧的collections便签下创建收藏夹
+
+![request](/images/postman/34.png)
+
+点击请求url右侧的save，并在保存的时候选择收藏夹目录
+
+![request](/images/postman/25.png)
+
+这样你的收藏在左侧就可以看到了
+
+![request](/images/postman/20.png)
+
+随后你就可以通过分享或者导出来把这些服务分享给项目组里的其他人了
+
+![request](/images/postman/share-menu-option.png)
+
+## 验证请求返回结果
+
+postman同样支持增加测试脚本来验证请求
+
+在url下面的test标签下输入测试脚本，输入框右侧提供了大量常用的测试脚本
+
+![request](/images/postman/cr-5.png)
+
+执行send会在返回结果的test中看到测试脚本的执行结果
+
+![request](/images/postman/cr-6.png)
+
+# 项目自动化构件时的服务测试
+
+## 依赖
+
+[Newman](https://www.npmjs.com/package/newman)
+
+postman命令行工具
+
+newman可以配合jenkins在项目自动化构建时校验服务的可用性
+
+这部分会在之后进行详细说明
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
